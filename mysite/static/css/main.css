@@ -1,0 +1,159 @@
+
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  font-family:arial,sans-serif;
+  font-size:160%;
+  margin:3em;
+  color:#ff0056;
+}
+.stick{
+  font-size: 140%;
+}
+.stick h1,h2,p{
+  font-size:300%;
+  font-weight:normal;
+  font-family:"Reenie Beanie",arial,sans-serif;
+}
+.stick h1{
+  font-size:300%;
+  font-weight:normal;
+  font-family:"Reenie Beanie",arial,sans-serif;
+  margin-top: -50px;
+}
+.stick ul,li{
+  list-style:none;
+}
+.stick ul{
+  overflow:hidden;
+  padding:3em;
+}
+.stick ul li a{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:10em;
+  width:10em;
+  padding:1em;
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+.stick ul li{
+  margin:1em;
+  float:left;
+}
+.stick ul li h2{
+  font-size:140%;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+.stick ul li p{
+  font-family:"Reenie Beanie",arial,sans-serif;
+  font-size:180%;
+}
+.stick ul li a{
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+  background: #f9de4f;
+}
+.stick ul li:nth-child(even) a{
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#7ad1e4;
+}
+.stick ul li:nth-child(3n) a{
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#ade254;
+}
+.stick ul li:nth-child(4n) a{
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#fda14a;
+}
+.stick ul li:nth-child(5n) a{
+  -o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+  background: #fe7ba7;
+}
+.stick ul li a:hover,.stick ul li a:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+.stick ol{text-align:center;}
+.stick ol li{display:inline;padding-right:1em;}
+.stick ol li a{color:#5daad0;}
+
+
+
+
+/* Login Form */
+
+.btn-login{
+  margin-left: 300px;
+}
+
+/* end of Login Form */
+
+
+/* -----------------------------   Nav Bar ------------------------------- 
+
+.navbar {
+      margin-bottom: 0;
+      background-color: #7dd4e7;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+
+
+/* -----------------------------  End of Nav Bar ------------------------- */
+
+
+
+/* Container : Pricing */
+#pricing{
+  margin-top: 10px;
+}
+/* End of container Pricing -->

@@ -1,0 +1,37 @@
+<html>
+<head>
+	
+</head>
+<body>
+
+    <a href="#" class="link1">Link 1</a>
+    <a href="#" class="link2">Link 2</a>
+    
+    <div class="div1">I'm div1</div>
+    <div class="div2">I'm div2</div>
+    
+    <script>
+		$(function () {
+
+    $(".div1, .div2").hide();
+    
+    $(".link1, .link2").bind("click", function () {
+
+      $(".div1, .div2").hide();        
+        
+      if ($(this).attr("class") == "link1")
+      {
+        $(".div1").show();
+      }
+      else 
+      { 
+        $(".div2").show();
+      }
+    });
+
+});
+
+
+	</script>
+</body>
+</html>

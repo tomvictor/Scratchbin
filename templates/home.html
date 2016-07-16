@@ -1,10 +1,241 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>home</title>
+  <title>Stick notes</title>
+  <meta charset="utf-8">
+  <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
 </head>
+
 <body>
-<h1>home</h1>
+
+ <!--       NAV_BAR    -->
+<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand  col-sm-12" href="#myPage"><img src=""  alt="TECHNORIP"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+                <li> <a href="account.html">Stick note</a></li>
+                <li><a href="#pricing">Scrums</a></li>
+                <li><a href="#">Manage</a></li>
+                </ul>
+
+        <ul class="nav navbar-nav pull-right">
+      
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;Account
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Info</a></li>
+          <li><a href="#">Setting</a></li>
+          <li><a href="home.html">Logout</a></li> 
+        </ul>
+                     
+    </div>
+  </div>
+</nav>
+</section><br><br><br>    
+                                          <!-- END-OF-NAVBAR   -->
+
+<div class="stick">
+<center><p><h1>Welcome to Stick notes!</h1></p></center>
+<hr>
+  <ul>
+    <li>
+      <a href="#">
+        <h2>Title #1</h2>
+        <p>Text Content #1</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #2</h2>
+        <p>Text Content #2</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #3</h2>
+        <p>Text Content #3</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #4</h2>
+        <p>Text Content #4</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #5</h2>
+        <p>Text Content #5</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #6</h2>
+        <p>Text Content #6</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #7</h2>
+        <p>Text Content #7</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #8</h2>
+        <p>Text Content #8</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #9</h2>
+        <p>Text Content #9</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #10</h2>
+        <p>Text Content #10</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #11</h2>
+        <p>Text Content #11</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h2>Title #12</h2>
+        <p>Text Content #12</p>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<!-- Container (Scrum Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center"><br><br>
+    <h2>Scrums</h2>
+    <h4>Choose a plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-3 col-xs-12">
+      <div class="panel panel-info text-center">
+        <div class="panel-heading">
+          <h1>Ice Cube</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3></h3>
+          <h4></h4>
+          <button class="btn btn-lg">view all</button>
+        </div>
+      </div>      
+    </div> 
+    <div class="col-sm-3 col-xs-12">
+      <div class="panel panel-warning text-center">
+        <div class="panel-heading">
+          <h1>Important</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3></h3>
+          <h4></h4>
+          <button class="btn btn-lg">view all</button>
+        </div>
+      </div>      
+    </div>         
+    <div class="col-sm-3 col-xs-12">
+      <div class="panel panel-primary text-center">
+        <div class="panel-heading">
+          <h1>Progress</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3></h3>
+          <h4></h4>
+          <button class="btn btn-lg">view all</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-3 col-xs-12">
+      <div class="panel panel-success text-center">
+        <div class="panel-heading">
+          <h1>Completed</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>0</strong> Lorem</p>
+          <p><strong>1</strong> Ipsum</p>
+          <p><strong>2</strong> Dolor</p>
+          <p><strong>3</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3></h3>
+          <h4></h4>
+          <button class="btn btn-lg">view all</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
