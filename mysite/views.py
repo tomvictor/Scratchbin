@@ -7,3 +7,12 @@ def home(request):
 
 def login(request):
     return render(request,'login.html',{})
+
+def sign_up(request):
+    return render(request,'thanks-for-new-registration.html',{})
+
+def create_notes(request):
+    return render(request,'create-note.html',{})
+
+def single_note(request):
+    return render(request,'single-note.html',{})

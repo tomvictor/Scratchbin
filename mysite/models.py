@@ -17,7 +17,7 @@ class accounts(models.Model):
 class notes(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
-    author =models.CharField(max_length=100)
-    published_date = models.DateTimeField()
-    last_update_date = models.DateField()
+    author =models.ForeignKey('auth.User')
+    published_date = models.DateTimeField(default=timezone.now())
+    last_update_date = models.DateField(default=timezone.now())
     staus   = models.BooleanField()
