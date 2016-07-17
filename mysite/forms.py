@@ -7,6 +7,5 @@ class NoteForm(forms.ModelForm):
         model = notes
         fields = ["title",
                   "content",
-                  "author",
                   "draft_staus",
                   ]

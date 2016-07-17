@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.core.urlresolvers import reverse
+from django.conf import settings
 
 
 # Create your models here.
@@ -24,7 +25,7 @@ class accounts(models.Model):
 class notes(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
-    author = models.ForeignKey('auth.User')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL,default=1)
     published_date = models.DateTimeField(default=timezone.now())
     last_update_date = models.DateField(default=timezone.now())
     draft_staus = models.BooleanField()
