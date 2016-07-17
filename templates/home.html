@@ -13,7 +13,7 @@
 
             {% for note in notes %}
                 <li>
-                    <a href="{% url 'mysite:detail' note.id %}">
+                    <a href="{{ note.get_absolute_url }}">
                         <h2>{{ note.title }}</h2>
                         <p>{{ note.content|truncatechars:25 }}</p>
                     </a>

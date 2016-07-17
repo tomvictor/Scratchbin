@@ -1,4 +1,4 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,get_object_or_404,HttpResponseRedirect
 from .forms import NoteForm
 from .models import notes
 from django.utils import timezone
@@ -24,7 +24,7 @@ def create_notes(request):
         instance = form.save(commit=False)
         print(form.cleaned_data.get("title"))
         instance.save()
-        return  render(request, 'home.html', {})
+        return HttpResponseRedirect(instance.get_absolute_url())
 
     return render(request, 'note-form.html', {'form': form})
 
@@ -35,8 +35,7 @@ def update_notes(request,id = None):
         instance = form.save(commit=False)
         print(form.cleaned_data.get("title"))
         instance.save()
-        return  render(request, 'home.html', {})
-
+        return HttpResponseRedirect(instance.get_absolute_url())
     return render(request, 'note-form.html', {'form': form})
 
 def scrum(request):
