@@ -4,9 +4,10 @@
 {% endblock %}
 {% block content %}
     <br>
-    <h2 style="text-align: center">{{ this_note.title }}</h2>
+    <h2 style="text-align: center">{{ this_note.title }} <a
+            href="{% url 'mysite:update' this_note.id %}"><span>   Edit</span></a></h2>
     <p>
-    {{ this_note.content }}
+        {{ this_note.content }}
     </p>
 
 {% endblock %}
