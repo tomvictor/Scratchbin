@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load crispy_forms_tags %}
 
 {% block extrahead %}
 
@@ -10,7 +11,7 @@
 
 <form action="/new/" method="post">
 {% csrf_token %}
-{{ form }}
+{{ form|crispy }}
 <input type="submit" value="Submit" />
 </form>
 
