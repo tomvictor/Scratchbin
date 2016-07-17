@@ -3,7 +3,21 @@
 {% block extrahead %}
 {% endblock %}
 {% block content %}
-    <br>
+<br>
+    {% if messages %}
+        {% for message in messages %}
+
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <strong>{{ message }}</strong>
+            </div>
+
+        {% endfor %}
+    {% endif %}
+
+
+
     <h2 style="text-align: center">{{ this_note.title }} <a
             href="{% url 'mysite:update' this_note.id %}"><span>   Edit</span></a></h2>
     <p>
