@@ -7,10 +7,13 @@ from django.utils import timezone
 # Create your views here.
 
 def home(request):
-    if not request.user.is_authenticated():
-        raise Http404
-    all_notes = notes.objects.order_by('published_date')
-    return render(request,'home.html',{'notes':all_notes})
+    if  request.user.is_authenticated():
+        all_notes = notes.objects.order_by('published_date')
+        return render(request, 'home.html', {'notes': all_notes})
+    else:
+        return redirect("mysite:login-page")
+
+    #return render(request,'home.html',{'notes':all_notes})
 
 def login(request):
     return render(request,'login.html',{})
