@@ -3,18 +3,19 @@
 
 
 {% block content %}
-
+    <br><br><br>
     <div class="stick">
-        <center><p>
-            <h1>Welcome to Stick notes!</h1></p></center>
+        <center>
+            <h1>Welcome to Stick notes!</h1>
+        </center>
         <hr>
         <ul>
 
             {% for note in notes %}
                 <li>
-                    <a href="#">
+                    <a href="{% url 'mysite:detail' note.id %}">
                         <h2>{{ note.title }}</h2>
-                        <p>{{ note.content|truncatechars:27 }}</p>
+                        <p>{{ note.content|truncatechars:25 }}</p>
                     </a>
                 </li>
             {% endfor %}

@@ -6,5 +6,7 @@ urlpatterns = [
     url(r'^$', views.home, name='home-page'),
     url(r'^login/$', views.login, name='login-page'),
     url(r'^new/$', views.create_notes, name='new-note'),
-    url(r'^scrum/$', views.scrum, name='scrum')
+    url(r'^scrum/$', views.scrum, name='scrum'),
+    url(r'^view/(?P<id>\d+)/$', views.note_detail, name='detail')
+
 ]
