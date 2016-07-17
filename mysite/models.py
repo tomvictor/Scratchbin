@@ -13,6 +13,8 @@ class accounts(models.Model):
         ('M','Male'),('F','Female')
     )
     gender = models.CharField(max_length=10, choices=gender_choice)
+    def __str__(self):
+        return self.first_name
 
 class notes(models.Model):
     title = models.CharField(max_length=100)
@@ -20,4 +22,6 @@ class notes(models.Model):
     author =models.ForeignKey('auth.User')
     published_date = models.DateTimeField(default=timezone.now())
     last_update_date = models.DateField(default=timezone.now())
-    staus   = models.BooleanField()
+    draft_staus   = models.BooleanField()
+    def __str__(self):
+        return self.title
