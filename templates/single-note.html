@@ -3,7 +3,7 @@
 {% block extrahead %}
 {% endblock %}
 {% block content %}
-<br>
+    <br>
     {% if messages %}
         {% for message in messages %}
 
@@ -19,7 +19,8 @@
 
 
     <h2 style="text-align: center">{{ this_note.title }} <a
-            href="{% url 'mysite:update' this_note.id %}"><span>   Edit</span></a></h2>
+            href="{% url 'mysite:update' this_note.id %}"><span>   Edit</span></a> <a
+            href="{% url 'mysite:delete' this_note.id %}"><span>   Delete</span></a></h2>
     <p>
         {{ this_note.content }}
     </p>

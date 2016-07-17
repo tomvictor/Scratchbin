@@ -1,4 +1,4 @@
-from django.shortcuts import render,get_object_or_404,HttpResponseRedirect
+from django.shortcuts import render,get_object_or_404,HttpResponseRedirect,redirect
 from django.contrib import messages
 from .forms import NoteForm
 from .models import notes
@@ -39,6 +39,13 @@ def update_notes(request,id = None):
         messages.success(request, "Succesfully Updated your note")
         return HttpResponseRedirect(instance.get_absolute_url())
     return render(request, 'note-form.html', {'form': form})
+
+def delete_notes(request,id = None):
+    instance = get_object_or_404(notes, id=id)
+    instance.delete()
+    messages.success(request, "Succesfully deleted your note")
+    return redirect("mysite:home-page")
+
 
 def scrum(request):
     return render(request,'scrum.html',{})

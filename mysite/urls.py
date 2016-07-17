@@ -7,6 +7,7 @@ urlpatterns = [
     url(r'^new/$', views.create_notes, name='new-note'),
     url(r'^scrum/$', views.scrum, name='scrum'),
     url(r'^notes/(?P<id>\d+)/$', views.note_detail, name='detail'),
-    url(r'^notes/(?P<id>\d+)/edit/$', views.update_notes, name='update')
+    url(r'^notes/(?P<id>\d+)/edit/$', views.update_notes, name='update'),
+    url(r'^notes/(?P<id>\d+)/delete/$', views.delete_notes, name='delete')
 
 ]
