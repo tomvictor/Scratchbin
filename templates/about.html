@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block extrahead %}
+{% endblock %}
+{% block content %}
+    <br>
+    {% if messages %}
+        {% for message in messages %}
+
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <strong>{{ message }}</strong>
+            </div>
+
+        {% endfor %}
+    {% endif %}
+
+
+
+    <h2 style="text-align: center"> Information page></h2>
+    <p>
+        This Site is a property of "Technorip Inc" indended for testing and optimising for the production release. So please don't share important posts. There might
+    be a chance for loosing data while transporting current sqlite DB to Mysql or PostgreSQL. Keep your password safe no one else or even
+    us can't help you for  retriving original password. Only resetting option is possible. Because your password is encrypted using
+        "pbkdf2_sha256" algorithm with 24000 itrations, random salts and hash value.
+    </p>
+    <br>
+    <h2>Credits</h2>
+    <p>Idea : Tomvictor</p>
+    <p>Backend : Tomvictor</p>
+    <p>Frontend: Hyder Nadeem</p>
+    <p>Inspiration: Silicon Valley, HBO Series</p>
+
+{% endblock %}
